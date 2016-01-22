@@ -1,18 +1,133 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>boot strap</title>
-        <!-- BootstrapのCSS読み込み -->
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <!-- jQuery読み込み -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <!-- BootstrapのJS読み込み -->
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    </head>
-    <body>
-        <h1>Hello, world!</h1>
-    </body>
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>boot strap</title>
+      <!-- BootstrapのCSS読み込み -->
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      <!-- jQuery読み込み -->
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <!-- BootstrapのJS読み込み -->
+      <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+      <!-- Font Awesomeの読み込み -->
+      <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+      <!-- about.cssの読み込み -->
+      <link rel="stylesheet" href="about.css" />
+      <!-- アンカースクロールのjs -->
+      <script type="text/javascript">
+        $(function(){
+        	$('a[href^=#]').click(function(){
+        		var speed = 500;
+        		var href= $(this).attr("href");
+        		var target = $(href == "#" || href == "" ? 'html' : href);
+        		var position = target.offset().top;
+        		$("html, body").animate({scrollTop:position}, speed, "swing");
+        		return false;
+        	});
+        });
+        </script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#site-menu">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="index.html" class="navbar-brand">310のポートフォリオ</a>
+          </div>
+          <div class="collapse navbar-collapse" id="site-menu">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="#about" class="selected">About</a></li>
+              <li><a href="#skills">SKILLS</a></li>
+              <li><a href="#works">WORKS</a></li>
+              <li><a href="#contact">CONTACT</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+	    <div class="row">
+        <div class="profile-header-container"  id="about">   
+      		<div class="profile-header-img">
+            <img class="img-circle" src="img/face-icon.png" />
+
+            <div class="rank-label-container">
+                <span class="label label-default rank-label">Hiroshi 310</span>
+            </div>
+          </div>
+        </div> 
+      </div>
+      <section>
+        <h2>About</h2>
+        <h3>自己紹介</h3>
+        <p>佐藤 博志</p>
+        <p>千葉県出身。東京都在住の会社員です。</p>
+        <p></p>
+        <p>私のポートフォリオを見て気になった方は、<a href="contact.html">Contact</a>よりご連絡お願い致します。</p>
+      </section>
+    </div>  
+    <div class="container-fluid bg-secondary" id="skills">
+      <div class="container">
+        <section>
+          <h2>SKILLS</h2>
+          <div class="col-sm-6">
+            <p class="text-center"><i class="fa fa-html5 fa-5x"></i></p>
+            <p class="text-center"><i class="fa fa-css3 fa-4x"></i></p>
+          </div>
+          <div class="col-sm-6 text-center">
+            <h3>aaaaaaaaaaaa</h3>
+            <p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+            <p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+            <p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="container-fluid bg-secondary2" id="works">
+      <div class="container">
+        <section>
+          <h2>WORKS</h2>
+          <div class="col-sm-6 text-center">
+            <a href="http://dropedm.jp"><img src="https://i.gyazo.com/a97f0d237b2484b0bc55ec3b4a83e92f.jpg" width="350px">
+            <h3>DROP</h3></a>
+          </div>
+          <div class="col-sm-6 text-center">
+            <a href="https://skima.jp"><img src="https://i.gyazo.com/7bd7175dd4ac28b346852aa5738d032b.png" width="350px">
+            <h3>SKIMA</h3></a>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="container-fluid bg-secondary" id="contact">
+      <div class="container">
+        <section>
+          <h2>CONTACT</h2>
+          <div class="col-sm-3">
+            <p class="text-center"><a href="#"><i class="fa fa-facebook-square fa-5x"></i></a></p>
+          </div>
+          <div class="col-sm-3">
+            <p class="text-center"><a href="#"><i class="fa fa-twitter-square fa-5x"></i></a></p>
+          </div>
+          <div class="col-sm-3">
+            <p class="text-center"><a href="#"><i class="fa fa-instagram fa-5x"></i></a></p>
+          </div>
+          <div class="col-sm-3">
+            <p class="text-center"><a href="#"><i class="fa fa-github fa-5x"></i></a></p>
+          </div>
+        </section>
+        <!-- 質問：colが５この場合、12だと割り切れないがどうすれば良いか？　-->
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2016 Hishi 310.</p>
+    </footer>
+  </body>
 </html>
